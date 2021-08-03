@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: blog
+  redis:
+      host: 192.168.2.32
+      port: 6379
+      pcmassword:
+      lettuce:
+        pool:
+          max-idle: 8
+          min-idle: 0
+          max-active: 8
+          max-wait: -1ms
+      database: 0
+  datasource:
+      name: test
+      url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123
+      #\u4F7F\u7528druid\u6570\u636E\u6E90
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 192.168.2.32:6379
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+server:
+  port: 8080
+
+jambo:
+  jwt:
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    expire: 604800
+    header: Authorization
+
+
+
+
+
