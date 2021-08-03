@@ -5,7 +5,7 @@ import cn.hutool.crypto.SecureUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jambo.common.dto.LoginDto;
 import com.jambo.common.lang.Result;
-import com.jambo.entity.User;
+import com.jambo.entity.po.User;
 import com.jambo.service.UserService;
 import com.jambo.util.JwtUtils;
 import org.apache.shiro.SecurityUtils;
